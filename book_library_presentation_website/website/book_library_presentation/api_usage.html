@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: #ffffff;
+        color: #202124;
+        font-family: 'Roboto', sans-serif;
+        padding: 40px;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .header {
+        margin-bottom: 30px;
+      }
+      .header h1 {
+        font-size: 36px;
+        color: #1a73e8;
+        font-weight: bold;
+      }
+      .main-content {
+        display: flex;
+        flex: 1;
+      }
+      .text-section {
+        flex: 1;
+        padding-right: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .visual-section {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .api-logo {
+        max-width: 400px;
+        margin-bottom: 40px;
+      }
+      .api-diagram {
+        width: 100%;
+        max-width: 450px;
+      }
+      p {
+        font-size: 20px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #5f6368;
+      }
+      .feature-list {
+        margin-top: 20px;
+      }
+      .feature-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+      .feature-icon {
+        color: #1a73e8;
+        margin-right: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <div class="content">
+        <div class="header">
+          <h1>API Integration</h1>
+        </div>
+        <div class="main-content">
+          <div class="text-section">
+            <p>The application will utilize the <strong>Google Books API</strong> to fetch book data and provide a rich user experience.</p>
+            
+            <div class="feature-list">
+              <div class="feature-item">
+                <i class="fas fa-search feature-icon"></i>
+                <span>Full-text searches across book titles, authors, and content</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-book feature-icon"></i>
+                <span>Retrieve detailed book information and metadata</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-image feature-icon"></i>
+                <span>Access to book cover images and previews</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-filter feature-icon"></i>
+                <span>Filter results by various parameters</span>
+              </div>
+            </div>
+          </div>
+          <div class="visual-section">
+            <img src="/home/ubuntu/upload/search_images/UiPQO28beQpd.png" alt="Google Books API Logo" class="api-logo">
+            
+            <svg class="api-diagram" viewBox="0 0 500 250">
+              <!-- App Icon -->
+              <rect x="50" y="100" width="100" height="100" rx="15" fill="#4285f4" />
+              <text x="100" y="150" text-anchor="middle" fill="white" font-size="14">Book Library App</text>
+              
+              <!-- API Icon -->
+              <rect x="350" y="100" width="100" height="100" rx="15" fill="#1a73e8" />
+              <text x="400" y="150" text-anchor="middle" fill="white" font-size="14">Google Books API</text>
+              
+              <!-- Arrows -->
+              <path d="M160 125 L340 125" stroke="#5f6368" stroke-width="3" fill="none" />
+              <polygon points="340,125 330,120 330,130" fill="#5f6368" />
+              <text x="250" y="115" text-anchor="middle" fill="#5f6368" font-size="12">Request</text>
+              
+              <path d="M340 175 L160 175" stroke="#5f6368" stroke-width="3" fill="none" />
+              <polygon points="160,175 170,170 170,180" fill="#5f6368" />
+              <text x="250" y="195" text-anchor="middle" fill="#5f6368" font-size="12">Book Data</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

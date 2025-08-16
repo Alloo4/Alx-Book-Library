@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: #ffffff;
+        color: #202124;
+        font-family: 'Roboto', sans-serif;
+        padding: 40px;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .header {
+        margin-bottom: 40px;
+      }
+      .header h1 {
+        font-size: 36px;
+        color: #1a73e8;
+        font-weight: bold;
+      }
+      .features-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 40px;
+        flex: 1;
+      }
+      .feature-item {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border-left: 4px solid #1a73e8;
+        background: #f8f9fa;
+      }
+      .feature-icon {
+        font-size: 48px;
+        color: #1a73e8;
+        margin-right: 30px;
+        width: 80px;
+        text-align: center;
+      }
+      .feature-text h3 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #202124;
+      }
+      .feature-text p {
+        font-size: 18px;
+        color: #5f6368;
+        line-height: 1.4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <div class="content">
+        <div class="header">
+          <h1>Key Features</h1>
+        </div>
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <div class="feature-text">
+              <h3>Book Search</h3>
+              <p>Users can search for books using keywords, titles, or authors</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-list"></i>
+            </div>
+            <div class="feature-text">
+              <h3>Search Results Display</h3>
+              <p>Display list of books with covers, titles, and authors</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <div class="feature-text">
+              <h3>Book Details View</h3>
+              <p>Comprehensive book information including description and publication date</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="feature-text">
+              <h3>Responsive Design</h3>
+              <p>Built with Tailwind CSS for optimal experience across all devices</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

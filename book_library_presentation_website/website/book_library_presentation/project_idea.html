@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: #ffffff;
+        color: #202124;
+        font-family: 'Roboto', sans-serif;
+        padding: 40px;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .header {
+        margin-bottom: 30px;
+      }
+      .header h1 {
+        font-size: 36px;
+        color: #1a73e8;
+        font-weight: bold;
+      }
+      .main-content {
+        display: flex;
+        flex: 1;
+      }
+      .text-section {
+        flex: 1;
+        padding-right: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .image-section {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .app-mockup {
+        max-width: 500px;
+        max-height: 500px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      p {
+        font-size: 20px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #5f6368;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <div class="content">
+        <div class="header">
+          <h1>Project Idea</h1>
+        </div>
+        <div class="main-content">
+          <div class="text-section">
+            <p>The Book Library application aims to provide users with a seamless experience to search for books and view their details.</p>
+            <p>This user-friendly interface will access a vast collection of book information by leveraging a public books API.</p>
+            <p>Users will be able to search by keywords, titles, or authors and view comprehensive information about each book.</p>
+          </div>
+          <div class="image-section">
+            <img src="/home/ubuntu/upload/search_images/K0crT10ZexZJ.jpg" alt="Book Library Application Concept" class="app-mockup">
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

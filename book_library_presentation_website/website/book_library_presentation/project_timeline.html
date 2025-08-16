@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: #ffffff;
+        color: #202124;
+        font-family: 'Roboto', sans-serif;
+        padding: 40px;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .header {
+        margin-bottom: 30px;
+      }
+      .header h1 {
+        font-size: 36px;
+        color: #1a73e8;
+        font-weight: bold;
+      }
+      .timeline-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .chart-container {
+        height: 300px;
+        margin-bottom: 40px;
+      }
+      .milestones {
+        display: flex;
+        justify-content: space-between;
+      }
+      .milestone {
+        width: 18%;
+        padding: 15px;
+        background: #f8f9fa;
+        border-left: 4px solid #1a73e8;
+      }
+      .milestone h3 {
+        font-size: 20px;
+        font-weight: bold;
+        color: #1a73e8;
+        margin-bottom: 10px;
+      }
+      .milestone ul {
+        padding-left: 20px;
+        color: #5f6368;
+      }
+      .milestone li {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <div class="content">
+        <div class="header">
+          <h1>5-Week Project Timeline</h1>
+        </div>
+        <div class="timeline-container">
+          <div class="chart-container">
+            <canvas id="timelineChart"></canvas>
+          </div>
+          <div class="milestones">
+            <div class="milestone">
+              <h3>Week 1</h3>
+              <ul>
+                <li>Environment Setup</li>
+                <li>API Integration</li>
+                <li>Basic Search & Display</li>
+              </ul>
+            </div>
+            <div class="milestone">
+              <h3>Week 2</h3>
+              <ul>
+                <li>Routing</li>
+                <li>Book Detail Component</li>
+                <li>Error Handling</li>
+              </ul>
+            </div>
+            <div class="milestone">
+              <h3>Week 3</h3>
+              <ul>
+                <li>Tailwind CSS Integration</li>
+                <li>UI/UX Enhancements</li>
+                <li>Pagination/Infinite Scroll</li>
+              </ul>
+            </div>
+            <div class="milestone">
+              <h3>Week 4</h3>
+              <ul>
+                <li>Search Filters</li>
+                <li>Unit Testing</li>
+                <li>Integration Testing</li>
+              </ul>
+            </div>
+            <div class="milestone">
+              <h3>Week 5</h3>
+              <ul>
+                <li>Deployment Preparation</li>
+                <li>Deployment</li>
+                <li>Documentation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const ctx = document.getElementById('timelineChart').getContext('2d');
+        
+        const timelineChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5'],
+            datasets: [
+              {
+                label: 'Setup & Core Functionality',
+                data: [100, 0, 0, 0, 0],
+                backgroundColor: '#1a73e8',
+              },
+              {
+                label: 'Detailed View & Routing',
+                data: [0, 100, 0, 0, 0],
+                backgroundColor: '#4285f4',
+              },
+              {
+                label: 'Responsive Design & Refinements',
+                data: [0, 0, 100, 0, 0],
+                backgroundColor: '#5f6368',
+              },
+              {
+                label: 'Advanced Features & Testing',
+                data: [0, 0, 0, 100, 0],
+                backgroundColor: '#4285f4',
+              },
+              {
+                label: 'Deployment & Documentation',
+                data: [0, 0, 0, 0, 100],
+                backgroundColor: '#1a73e8',
+              }
+            ]
+          },
+          options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              x: {
+                stacked: true,
+                max: 100,
+                ticks: {
+                  display: false
+                },
+                grid: {
+                  display: false
+                }
+              },
+              y: {
+                stacked: true,
+                grid: {
+                  display: false
+                }
+              }
+            },
+            plugins: {
+              legend: {
+                position: 'bottom',
+                labels: {
+                  boxWidth: 12,
+                  font: {
+                    size: 14
+                  }
+                }
+              },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    return context.dataset.label;
+                  }
+                }
+              }
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+
